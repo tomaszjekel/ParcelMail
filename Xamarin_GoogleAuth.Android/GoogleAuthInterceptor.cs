@@ -37,11 +37,14 @@ namespace Xamarin_GoogleAuth.Droid
 
             // Convert iOS NSUrl to C#/netxf/BCL System.Uri - common API
             Uri uri_netfx = new Uri(uri_android.ToString());
-            
+
             // Send the URI to the Authenticator for continuation
             MainActivity.Auth?.OnPageLoading(uri_netfx);
 
             Finish();
         }
+
+      
     }
+    
 }
